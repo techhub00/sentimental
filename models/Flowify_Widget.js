@@ -1,0 +1,93 @@
+const mongoose =require('mongoose');
+const Schema =mongoose.Schema;
+const Flowify_WidgetSchema=new Schema({
+  User_Id:{
+    type:String,
+    required:true
+  },
+  Unique_Id:{
+    type:String,
+    required:true
+  },
+  Name:{
+    type:String,
+    required:true
+  },
+  
+  Pre_Build:{
+    type:String,
+    required:true
+  },
+  Responsive:{
+    type:String,
+    required:true
+  },
+  Theme_Light:{
+    type:String,
+    required:true
+  },
+  Width:{
+    type:String,
+    required:true
+  },
+  Height:{
+    type:String,
+    required:true
+  },
+  Nav_Btn_Color:{
+    type:String,
+    required:true
+  },
+  Nav_Btn_Text_Color:{
+    type:String,
+    required:true
+  },
+  Text_Color:{
+    type:String,
+    required:true
+  },
+  Btn_Border:{
+    type:String,
+    required:true
+  },
+  Start_Btn_Text:{
+    type:String,
+    required:true
+  },
+
+  Confirm_Btn_Text:{
+    type:String,
+    required:true
+  },
+  Heading:{
+    type:String,
+    required:true
+  },
+  Sub_Heading:{
+    type:String,
+    required:true
+  },
+  Page2_Heading:{
+    type:String,
+    required:true
+  },
+  Page2_Sub_Heading:{
+    type:String,
+    required:true
+  },
+  Confirmation_Text:{
+    type:String,
+    required:true
+  },
+  Logo:{
+    type:String,
+    required:true
+  },
+  Background:{
+    type:String,
+    required:true
+  },
+  
+  
+});
+mongoose.model('flowify_widget',Flowify_WidgetSchema);

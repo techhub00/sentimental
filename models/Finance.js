@@ -1,0 +1,83 @@
+
+const mongoose =require('mongoose');
+const Schema =mongoose.Schema;
+const FinanceSchema=new Schema({
+  Borrow_Amount:{
+    type:String,
+    required:true
+  },
+  Loan_Term:{
+    type:String,
+    required:true
+  },
+  First_Name:{
+    type:String,
+    required:true
+  },
+  Middle_Name:{
+    type:String,
+    required:true
+  },
+  Last_Name:{
+    type:String,
+    required:true
+  },
+  Email:{
+    type:String,
+    required:true
+  },
+  dob:{
+    type:String,
+    required:true
+  },
+  Gender:{
+    type:String,
+    required:true
+  },
+  Address:{
+    type:String,
+    required:true
+  },
+  Number:{
+    type:String,
+    required:true
+  },
+  Expenses:{
+    type:String,
+    required:true
+  },
+  Total_As:{
+    type:String,
+    required:true
+  },
+  Total_Laib:{
+    type:String,
+    required:true
+  },
+  Licence_Type:{
+    type:String,
+    required:true
+  },
+  Licence_No:{
+    type:String,
+    required:true
+  },
+  Licence_Version:{
+    type:String,
+    required:true
+  },
+  Licence_E_Date:{
+    type:String,
+    required:true
+  },
+  Licence_Verification:{
+    type:String,
+    required:true
+  },
+  Passport_Verification:{
+    type:String,
+    required:true
+  },
+  
+});
+mongoose.model('finance',FinanceSchema);

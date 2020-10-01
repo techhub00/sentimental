@@ -1,0 +1,369 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/side_bar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Favicon and touch icons -->
+    <link rel="stylesheet" href="/css/style.css">
+
+  </head>
+  <style>
+      a:hover{
+        text-decoration: none;
+    }
+    .widget
+    {  
+  border-radius: 10px;
+  box-shadow: 0 0 10px #111e6c;
+    }
+    .widget:hover
+    {  
+  box-shadow: 0 0 20px #111e6c;
+    }
+    .top-up
+{
+  
+  color:#000;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+
+  background-color:#fff;
+}
+.top-up:hover
+{
+  
+  color:#fff;
+  background-color:#fff;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+  text-decoration: none;
+}
+
+.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+.fileinput-remove,
+.fileinput-upload{
+	display: none;
+}
+
+.dropdown-menu a
+{
+  color: #fff;
+}
+li a{
+  color: #000;
+}
+.new{
+  background-color: #fff;
+}
+.new:hover{
+  background-color:#111e6c ;
+}
+  </style>
+  <body>
+
+   
+  <nav style=" z-index: 100; padding-bottom:20px;background-color:#111e6c" class="fixed-top" id="main-nav">
+    <div>
+        <div style="float: left;">
+            <a class="btn btn-primary open-menu" style="margin-left: 20px; margin-top: -5px;background-color:#111e6c;border: none;" href="#" role="button">
+                <i class="fas fa-align-left"></i> 
+            </a>
+            <div style="color: #fff; margin-left: 90px;margin-top: 16px;" >Dashboard</div>
+        </div>
+      
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+        
+      </div>
+    
+    
+  </nav>
+  <div class="wrapper">
+        <!-- Sidebar -->
+        <nav style="z-index: 100000;" class="sidebar">
+      <!-- close sidebar menu -->
+    <div class="dismiss">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+ 
+    <div>
+       <img class="rounded mx-auto d-block my-4" src="<%=User.Picture%>" height=100px width="100px">
+    </div>
+ 
+    <ul >
+        
+        <li>
+            <a  href="/user_profile"><i class="fas fa-user"></i>Profile</a>
+        </li>
+        <li>
+            <a  href="/profile_setting"><i class="fas fa-cog"></i>Setting</a>
+        </li>
+        <li>
+            <a  href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        </li>
+       
+       
+    </ul>
+ 
+    
+        </nav>
+       
+     
+        
+     
+    </div>
+ <!-- End sidebar -->
+
+    <div class=" bg-white text-dark col-12" style="padding-left: 50px; background-color: #c1c1c1;">
+      <div class="col-12" style="margin-top:80px;"> 
+       
+        </div>
+
+      </div>
+      
+    
+      <div class="container-fluid pt-0">
+       
+        <hr>
+  
+  
+  
+  
+  
+  
+        <div class="row">
+          <div class="col-sm-12 col-lg-10 m-auto">
+            <div class="modal-content ">
+              <div class="modal-header" style="background-color: #111e6c;">
+                <h5 class="modal-title text-white" >Flowify</h5>
+                <a href="/user-dash-board" class="fa fa-times" style="font-size: 16px;color: #fff;"></a>
+              </div>
+              <div class="modal-body p-1 " style="border: solid 2px #111e6c; border-radius: 4px;">
+                  <div class="clear-fix mt-2 p-1 col-lg-12 col-sm-12 main-section m-auto" >
+                     
+                      
+                            
+                      <div class="row bg-white p-0  m-auto" style=" border-radius: 20px;">
+                          <div class="card  card-form col-12" style="background:#fff;color:#111e6c;border: solid 3px #111e6c ;box-shadow: 0 0 5px #111e6c;">
+                              <div class="card-body ">
+                                <h3 class="text-center"><b>Update User Profile Today</b></h3>
+                                <p class="text-center">Please fill out this form</p>
+                                <%if(errors!=""){%>
+                                   <%for(var i=0; i< errors.length;i++){%>
+                                  <div class="alert alert-danger"><%=errors[i]%></div> 
+                                  <%}%>
+                                <%}%>
+                                <%if(success!=""){%>
+                                  <%for(var i=0; i< success.length;i++){%>
+                                 <div class="alert alert-dismissible alert-success"><%=success[i]%></div> 
+                                 <%}%>
+                               <%}%>
+              
+                             
+                                 <form action="/profile_update" enctype="multipart/form-data" method="POST">
+                                  
+                                  <img src="/<%=User.Picture%>" height="100px" width="100px">
+                                  <div class="form-group">
+                                      <label style="font-weight: bold;">Choose Profile Picture</label>
+                                    <input type="file" name="userfile" required class="form-control">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Plz Choose profile pic
+                 </div>
+                                  </div>
+                                  <input type="hidden" name="id" value="<%=User._id%>">
+                                  <div class="form-group">
+                                      <input  id="submitBtn" type="submit" value="Update Profile Picture" class="btn btn-block" >
+                                    </div>
+                                 </form>
+                                  
+                                 <h4 class="p-2" style="background-color: #111e6c;color:#fff;border-radius: 10px;">Text Fields Info
+                                  </h4>
+                                  <form action="/profile_text_up"  method="POST" id="myForm1" class="needs-validation" novalidate>
+                                      <div class="form-group">
+                                          <lable style="font-weight: bold;">First Name:</lable>
+                                          <input  type="text" name="first_name" value="<%=User.First_Name%>" required class="form-control form-control-lg" value="Cool" placeholder="Cool">
+                                          <div  class="valid-feedback">Valid</div>
+                                          <div  class="invalid-feedback">
+                                      Choose Correct Name
+                                       
+                                       </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <lable style="font-weight: bold;">Last Name:</lable>
+                                      <input  type="text" name="last_name" value="<%=User.Last_Name%>" required class="form-control form-control-lg" value="Cool" placeholder="Cool">
+                                      <div  class="valid-feedback">Valid</div>
+                                      <div  class="invalid-feedback">
+                                  Choose Correct Name
+                                   
+                                   </div>
+                              </div>
+                              <div class="form-group">
+                                  <lable style="font-weight: bold;">Password:</lable>
+                                  <input  type="password" name="pass" value="<%=User.Password%>" required class="form-control form-control-lg" value="Cool" placeholder="Cool">
+                                  <div  class="valid-feedback">Valid</div>
+                                  <div  class="invalid-feedback">
+                              Choose Correct password
+                               
+                               </div>
+                          </div>    
+                          <div class="form-group">
+                              <lable style="font-weight: bold;">Country:</lable>
+                              <input  type="text" name="country" value="<%=User.Country%>" required class="form-control form-control-lg" value="Cool" placeholder="Cool">
+                              <div  class="valid-feedback">Valid</div>
+                              <div  class="invalid-feedback">
+                          Choose Correct password
+                           
+                           </div>
+                      </div>      
+                                      
+  
+                                 <input type="hidden" value="<%=User._id%>" name="id">
+  
+                                     
+                                     
+                                      <div class="form-group">
+                                        <input  id="submitBtn" type="submit" value="Update User" class="btn btn-block" >
+                                      </div>
+                                    </form>
+                                
+
+
+
+
+
+
+
+
+
+
+                              </div>
+                            </div>
+                          
+                             
+                           
+                      </div>
+             
+        
+  
+      </div>
+      
+      
+      <div class="col-12 mt-4">
+        
+    </div>
+  </div>
+    <!-- page-content" -->
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+    <script>
+      $(document).ready (function(){
+       $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+       $(".alert-dismissible").alert('close');
+   });
+            
+   });
+     </script>
+   
+<script>
+    jQuery(document).ready(function() {
+ 
+ $('.dismiss, .overlay').on('click', function() {
+     $('.sidebar').removeClass('active');
+     $('.overlay').removeClass('active');
+ });
+
+ $('.open-menu').on('click', function(e) {
+     e.preventDefault();
+     $('.sidebar').addClass('active');
+     $('.overlay').addClass('active');
+     // close opened sub-menus
+     $('.collapse.show').toggleClass('show');
+     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+ });
+
+ /* other code */
+
+});
+$('a.scroll-link').on('click', function(e) {
+    e.preventDefault();
+    scroll_to($(this), 0);
+});
+ 
+function scroll_to(clicked_link, nav_height) {
+    var element_class = clicked_link.attr('href').replace('#', '.');
+    var scroll_to = 0;
+    if(element_class != '.top-content') {
+        element_class += '-container';
+        scroll_to = $(element_class).offset().top - nav_height;
+    }
+    if($(window).scrollTop() != scroll_to) {
+        $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+    }
+}
+$('.to-top a').on('click', function(e) {
+    e.preventDefault();
+    if($(window).scrollTop() != 0) {
+        $('html, body').stop().animate({scrollTop: 0}, 1000);
+    }
+});
+$('a.btn-customized-dark').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').removeClass('light');
+});
+ 
+$('a.btn-customized-light').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').addClass('light');
+});
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'down') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '0'
+});
+ 
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'up') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '-5'
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,559 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/side_bar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Favicon and touch icons -->
+    <script>
+      window.addEventListener( "pageshow", function ( event ) {
+      var historyTraversal = event.persisted || 
+                             ( typeof window.performance != "undefined" && 
+                                  window.performance.navigation.type === 2 );
+      if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+    </script>
+ <script>
+
+    (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+    // Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+    form.addEventListener('submit', function(event) {
+    if (form.checkValidity() === false) {
+    event.preventDefault();
+    event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+    }, false);
+    });
+    }, false);
+    })();
+        </script>
+
+
+  </head>
+  <style>
+      a:hover{
+        text-decoration: none;
+    }
+    .widget
+    {  
+  border-radius: 10px;
+  box-shadow: 0 0 10px #111e6c;
+    }
+    .widget:hover
+    {  
+  box-shadow: 0 0 20px #111e6c;
+    }
+    .top-up
+{
+  
+  color:#000;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+
+  background-color:#fff;
+}
+.top-up:hover
+{
+  
+  color:#fff;
+  background-color:#fff;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+  text-decoration: none;
+}
+
+.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+.fileinput-remove,
+.fileinput-upload{
+	display: none;
+}
+
+.dropdown-menu a
+{
+  color: #fff;
+}
+li a{
+  color: #000;
+}
+.new{
+  background-color: #fff;
+}
+.new:hover{
+  background-color:#111e6c ;
+}
+  </style>
+  <body>
+
+   
+  <nav style=" z-index: 100; padding-bottom:20px;background-color:#111e6c" class="fixed-top" id="main-nav">
+    <div>
+        <div style="float: left;">
+            <a class="btn btn-primary open-menu" style="margin-left: 20px; margin-top: -5px;background-color:#111e6c;border: none;" href="#" role="button">
+                <i class="fas fa-align-left"></i> 
+            </a>
+            <div style="color: #fff; margin-left: 90px;margin-top: 16px;" >Dashboard</div>
+        </div>
+      
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+        
+      </div>
+    
+    
+  </nav>
+  <div class="wrapper">
+        <!-- Sidebar -->
+        <nav style="z-index: 100000;" class="sidebar">
+      <!-- close sidebar menu -->
+    <div class="dismiss">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+ 
+    <div>
+       <img class="rounded mx-auto d-block my-4" src="/<%=User.Picture%>" height=100px width="100px">
+    </div>
+ 
+    <ul class="list-styled menu-elements">
+        
+        <li>
+            <a href="/user_profile"><i class="fas fa-user"></i>Profile</a>
+        </li>
+        <li>
+            <a  href="/profile_setting"><i class="fas fa-cog"></i>Setting</a>
+        </li>
+        <li>
+            <a  href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        </li>
+       
+       
+    </ul>
+ 
+    
+        </nav>
+       
+     
+        
+     
+    </div>
+ <!-- End sidebar -->
+ <header>
+  <div class="dark-overlay col-sm-12 p-0 ">
+    <div class="home-inner container p-1 ">
+    <div class=" bg-white text-dark col-12" style="padding-left: 50px; background-color: #c1c1c1;">
+      <div class="col-12" style="margin-top:80px;"> 
+       
+
+      </div>
+      
+    
+      <div class="container-fluid pt-0">
+       
+        <hr>
+ 
+  
+  
+  
+  
+  
+        <div class="row">
+          <div class="col-sm-12 col-lg-10">
+            <div class="modal-content p-0 m-0">
+              <div class="modal-header" style="background-color: #111e6c;">
+                <h5 class="modal-title text-white" >Flowify</h5>
+                <a href="/new_widget" class="fa fa-times" style="font-size: 16px;color: #fff;"></a>
+              </div>
+              <div class="modal-body bg-white p-1 " style="border: solid 1px #111e6c; border-radius: 4px;">
+                  <div class="clear-fix mt-2 p-1 col-lg-12 col-sm-12 main-section m-auto" >
+                     
+
+
+                      
+                            
+                      <div class=" bg-white p-0  m-auto" style="opacity: 0.8; border-radius: 20px;">
+                          <div class="card m-auto  card-form col-sm-11 col-lg-6 p-0" style="background:#fff;color:#111e6c;border: solid 3px #111e6c ;box-shadow: 0 0 5px #111e6c;">
+                              <div class="card-body ">
+
+                                <h3 class="text-center">Ad item info</h3>
+                                
+                                <%if(errors!=""){%>
+                                   <%for(var i=0; i< errors.length;i++){%>
+                                  <div class="alert alert-danger"><%=errors[i]%></div> 
+                                  <%}%>
+                                <%}%>
+                                <%if(success!=""){%>
+                                  <%for(var i=0; i< success.length;i++){%>
+                                 <div class="alert alert-success"><%=success[i]%></div> 
+                                 <%}%>
+                               <%}%>
+                       <%if(User.Stripe_Account_Verification=="false"){%>
+                        <div class="alert alert-danger">Your account will active in next 24 hours and we will inform you through email then your can create new widget</div> 
+                        <%}else{%>
+                               
+                          
+                          <%if(widget_id=="none"){%>
+                            <form action="/ad_item_c" enctype="multipart/form-data" method="POST" id="myForm1" class="needs-validation" novalidate>
+
+                            <%} else{%>
+                              
+                              <form action="/u_ad_item_c" enctype="multipart/form-data" method="POST" id="myForm1" class="needs-validation" novalidate>
+
+                              <%}%>
+                                 
+                                    <div class="form-group add" >
+                                      <label  style="font-weight: bold;">Item Title</label>
+                                    <input type="text"  value="T Shart"  name="item_title" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Plz enter item title
+                 </div>
+                                  </div>
+                                  
+                                 
+                                  <div class="form-group add" >
+                                    <label  style="font-weight: bold;">Item Sub Title</label>
+                                  <input type="text"  value="Medium Size"  name="item_sub_title" required class="form-control form-control-lg" placeholder="abc....">
+                                  <div class="valid-feedback">Valid</div>
+                                  <div class="invalid-feedback">
+                   plz enter item sub title
+               </div>
+                                </div>
+                                <div class="form-group add" >
+                                    <label  style="font-weight: bold;">Color</label>
+                                  <input type="text"  value="black"  name="color" required class="form-control form-control-lg" placeholder="abc....">
+                                  <div class="valid-feedback">Valid</div>
+                                  <div class="invalid-feedback">
+                   Plz enter item color
+               </div>
+                                </div>
+                               
+                               
+                                <div class="form-group add">
+                                  <label  style="font-weight: bold;">Price</label>
+                                <input type="number" value="10"  name="price" required class="form-control form-control-lg" placeholder="$">
+                                <div class="valid-feedback">Valid</div>
+                                <div class="invalid-feedback">
+                 plz enter price
+             </div>
+                              </div>
+                              <div class="form-group add">
+                                <label  style="font-weight: bold;">Quantity in Stock</label>
+                              <input type="number"  value="10"  name="quantity" required class="form-control form-control-lg" placeholder="$">
+                              <div class="valid-feedback">Valid</div>
+                              <div class="invalid-feedback">
+               Plz enter quantity
+           </div>
+                            </div>
+                            <div class="form-group">
+                                <lable style="font-weight: bold;">Sale:</lable>
+                              <br>
+                                <span class="text-dark mr-2">Yes</span><input class="mt-2" type="radio" class="form-control" name="sale" value="1"  required >
+                                <span class="text-dark ml-3 mr-2">No</span><input checked class="mt-2"  type="radio" selected class="form-control" name="sale" value="0"  required >
+                              <div class="valid-feedback">Valid</div>
+                             
+                            </div>  
+                               
+                              <div class="form-group add">
+                                <label  style="font-weight: bold;">Choose Item image 1</label>
+                              <input type="file" name="userfile" class="form-control">
+                              <div class="valid-feedback">Valid</div>
+                              <div class="invalid-feedback">
+               Plz Choose item image 1
+           </div>
+                            </div>
+                            <div class="form-group add">
+                                <label  style="font-weight: bold;">Choose Item image 2</label>
+                              <input type="file" name="userfile" class="form-control">
+                              <div class="valid-feedback">Valid</div>
+                              <div class="invalid-feedback">
+               Plz Choose item image 2
+           </div>
+                            </div>
+                            <div class="form-group add">
+                                <label  style="font-weight: bold;">Choose Item image 3</label>
+                              <input type="file" name="userfile" class="form-control">
+                              <div class="valid-feedback">Valid</div>
+                              <div class="invalid-feedback">
+               Plz Choose item image 3
+           </div>
+                            </div>
+                            <div class="form-group add">
+                                <label  style="font-weight: bold;">Choose Item image 4</label>
+                              <input type="file" name="userfile" class="form-control">
+                              <div class="valid-feedback">Valid</div>
+                              <div class="invalid-feedback">
+               Plz Choose item image 4
+           </div>
+                            </div>
+<input type="hidden" name="ukey" value="<%=ukey%>">
+<input type="hidden" name="widget_id" value="<%=widget_id%>">
+
+
+                                 
+
+
+
+
+                                    
+                                 
+                                  <div class="form-group">
+                                    <input  id="submitBtn" type="submit" value="Ad item" class="btn btn-block" >
+                                  </div>
+                                </form>
+                                <%}%>
+                              </div>
+                            </div>
+                          
+                             
+                           
+                      </div>
+                      
+
+
+
+                  <div style="clear: both;"></div>
+                     
+                     
+                  
+  
+  
+  
+  
+                     
+  
+  
+  
+                  </div>
+
+
+
+   
+  </div>
+
+
+
+             
+        
+  
+      </div>
+      
+      
+      
+  </div>
+  </div>
+  </div>
+</header>
+    <!-- page-content" -->
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+ 
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+      $(document).ready (function(){
+       $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+       $(".alert-dismissible").alert('close');
+   });
+            
+   });
+     </script>
+
+
+
+
+
+  <script>
+  jQuery(function ($) {
+  
+  $(".sidebar-dropdown > a").click(function() {
+  $(".sidebar-submenu").slideUp(200);
+  if (
+  $(this)
+    .parent()
+    .hasClass("active")
+  ) {
+  $(".sidebar-dropdown").removeClass("active");
+  $(this)
+    .parent()
+    .removeClass("active");
+  } else {
+  $(".sidebar-dropdown").removeClass("active");
+  $(this)
+    .next(".sidebar-submenu")
+    .slideDown(200);
+  $(this)
+    .parent()
+    .addClass("active");
+  }
+  });
+  
+  $("#close-sidebar").click(function() {
+  $(".page-wrapper").removeClass("toggled");
+  });
+  $("#show-sidebar").click(function() {
+  $(".page-wrapper").addClass("toggled");
+  });
+  
+  
+  
+  
+  });
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+    $('#select').on('change', function() {
+      if ( this.value == 'SignUp' || this.value == 'Finance')
+      //.....................^.......
+      {
+        $(".signup_f").show();
+        $(".add").hide();
+  
+      }
+      else if ( this.value == 'Ad')
+      {
+        $(".signup_f").hide();
+        $(".add").show();
+      }
+      else
+      {
+        $(".signup_f").hide();
+        $(".add").hide();
+      }
+      
+     
+      
+      
+    });
+  });
+  </script>
+  <script>
+  function myFunction() {
+  if( document.getElementById("file").disabled === true)
+    document.getElementById("file").disabled = false;
+  else
+   document.getElementById("file").disabled = true;
+  }
+  </script>
+
+
+
+
+<script>
+    jQuery(document).ready(function() {
+ 
+ $('.dismiss, .overlay').on('click', function() {
+     $('.sidebar').removeClass('active');
+     $('.overlay').removeClass('active');
+ });
+
+ $('.open-menu').on('click', function(e) {
+     e.preventDefault();
+     $('.sidebar').addClass('active');
+     $('.overlay').addClass('active');
+     // close opened sub-menus
+     $('.collapse.show').toggleClass('show');
+     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+ });
+
+ /* other code */
+
+});
+$('a.scroll-link').on('click', function(e) {
+    e.preventDefault();
+    scroll_to($(this), 0);
+});
+ 
+function scroll_to(clicked_link, nav_height) {
+    var element_class = clicked_link.attr('href').replace('#', '.');
+    var scroll_to = 0;
+    if(element_class != '.top-content') {
+        element_class += '-container';
+        scroll_to = $(element_class).offset().top - nav_height;
+    }
+    if($(window).scrollTop() != scroll_to) {
+        $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+    }
+}
+$('.to-top a').on('click', function(e) {
+    e.preventDefault();
+    if($(window).scrollTop() != 0) {
+        $('html, body').stop().animate({scrollTop: 0}, 1000);
+    }
+});
+$('a.btn-customized-dark').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').removeClass('light');
+});
+ 
+$('a.btn-customized-light').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').addClass('light');
+});
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'down') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '0'
+});
+ 
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'up') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '-5'
+});
+</script>
+<script>
+  // Material Select Initialization
+$(document).ready(function() {
+$('.my-select').selectpicker();
+});
+</script>
+
+</body>
+</html>

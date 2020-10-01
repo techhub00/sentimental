@@ -1,0 +1,683 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500&display=swap">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/side_bar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- Favicon and touch icons -->
+    <script>
+      window.addEventListener( "pageshow", function ( event ) {
+      var historyTraversal = event.persisted || 
+                             ( typeof window.performance != "undefined" && 
+                                  window.performance.navigation.type === 2 );
+      if ( historyTraversal ) {
+        // Handle page restore.
+        window.location.reload();
+      }
+    });
+    </script>
+  <script>
+
+      (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+      // Fetch all the forms we want to apply custom Bootstrap validation styles to
+      var forms = document.getElementsByClassName('needs-validation');
+      // Loop over them and prevent submission
+      var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+      if (form.checkValidity() === false) {
+      event.preventDefault();
+      event.stopPropagation();
+      }
+      form.classList.add('was-validated');
+      }, false);
+      });
+      }, false);
+      })();
+          </script>
+
+  </head>
+  <style>
+      a:hover{
+        text-decoration: none;
+    }
+    .widget
+    {  
+  border-radius: 10px;
+  box-shadow: 0 0 10px #111e6c;
+    }
+    .widget:hover
+    {  
+  box-shadow: 0 0 20px #111e6c;
+    }
+    .top-up
+{
+  
+  color:#000;
+  font-size: 15px;
+  padding: 10px;
+  margin: 0px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+
+  background-color:#fff;
+}
+.top-up:hover
+{
+  
+  color:#fff;
+  background-color:#fff;
+  padding: 10px;
+  margin: 0px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px #fff;
+  text-decoration: none;
+}
+
+.main-section{
+	margin:0 auto;
+	padding: 20px;
+	margin-top: 100px;
+	background-color: #fff;
+	box-shadow: 0px 0px 20px #c1c1c1;
+}
+.fileinput-remove,
+.fileinput-upload{
+	display: none;
+}
+
+.dropdown-menu a
+{
+  color: #fff;
+}
+li a{
+  color: #000;
+}
+.new{
+  background-color: #fff;
+}
+.new:hover{
+  background-color:#111e6c ;
+}
+  </style>
+  <body>
+
+   
+  <nav style=" z-index: 100; padding-bottom:20px;background-color:#111e6c" class="fixed-top" id="main-nav">
+    <div>
+        <div style="float: left;">
+            <a class="btn btn-primary open-menu" style="margin-left: 20px; margin-top: -5px;background-color:#111e6c;border: none;" href="#" role="button">
+                <i class="fas fa-align-left"></i> 
+            </a>
+            <div style="color: #fff; margin-left: 90px;margin-top: 16px;" >Dashboard</div>
+        </div>
+      
+      <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+       
+        
+      </div>
+    
+    
+  </nav>
+  <div class="wrapper">
+        <!-- Sidebar -->
+        <nav style="z-index: 100000;" class="sidebar">
+      <!-- close sidebar menu -->
+    <div class="dismiss">
+        <i class="fas fa-arrow-left"></i>
+    </div>
+ 
+    <div>
+       <img class="rounded mx-auto d-block my-4" src="<%=User.Picture%>" height=100px width="100px">
+    </div>
+ 
+    <ul class="list-styled menu-elements">
+        
+        <li>
+            <a href="/user_profile"><i class="fas fa-user"></i>Profile</a>
+        </li>
+        <li>
+            <a  href="/profile_setting"><i class="fas fa-cog"></i>Setting</a>
+        </li>
+        <li>
+            <a  href="logout"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a>
+        </li>
+       
+       
+    </ul>
+ 
+    
+        </nav>
+       
+     
+        
+     
+    </div>
+ <!-- End sidebar -->
+ <header>
+  <div class="dark-overlay col-sm-12 p-0 ">
+    <div class="home-inner container p-1 ">
+    <div class=" bg-white text-dark col-12" style="padding-left: 50px; background-color: #c1c1c1;">
+      <div class="col-12" style="margin-top:80px;"> 
+       
+
+      </div>
+      
+    
+      <div class="container-fluid pt-0">
+       
+        <hr>
+ 
+  
+  
+  
+  
+  
+        <div class="row">
+          <div class="col-sm-12 col-lg-10">
+            <div class="modal-content p-0 m-0">
+              <div class="modal-header" style="background-color: #111e6c;">
+                <h5 class="modal-title text-white" >Flowify</h5>
+                <a href="/user-dash-board" class="fa fa-times" style="font-size: 16px;color: #fff;"></a>
+              </div>
+              <div class="modal-body bg-white p-1 " style="border: solid 1px #111e6c; border-radius: 4px;">
+                  <div class="clear-fix mt-2 p-1 col-lg-12 col-sm-12 main-section m-auto" >
+                     
+                      
+                            
+                      <div class=" bg-white p-0  m-auto" style="opacity: 0.8; border-radius: 20px;">
+                          <div class="card float-left ml-3  card-form col-sm-11 col-lg-6 p-0" style="background:#fff;color:#111e6c;border: solid 3px #111e6c ;box-shadow: 0 0 5px #111e6c;">
+                              <div class="card-body ">
+                                <h3 class="text-center">Create New Widget Today</h3>
+                                <p class="text-center">Please fill out this form</p>
+                                <%if(errors!=""){%>
+                                   <%for(var i=0; i< errors.length;i++){%>
+                                  <div class="alert alert-danger"><%=errors[i]%></div> 
+                                  <%}%>
+                                <%}%>
+                                <%if(success!=""){%>
+                                  <%for(var i=0; i< success.length;i++){%>
+                                 <div class="alert alert-success"><%=success[i]%></div> 
+                                 <%}%>
+                               <%}%>
+                       <%if(User.Stripe_Account_Verification=="false"){%>
+                        <div class="alert alert-danger">Your account will active in next 24 hours and we will inform you through email then your can create new widget</div> 
+                        <%}else{%>
+                                <form action="/new_widget_c" enctype="multipart/form-data" method="POST" id="myForm1" class="needs-validation" novalidate>
+                                  <div class="form-group">
+                                      <lable style="font-weight: bold;">Choose Name:</lable>
+                                      <input pattern="^[a-zA-Z0-9\s]{4,10}$" type="text" name="name" required class="form-control form-control-lg" value="Cool" placeholder="Cool">
+                                      <div  class="valid-feedback">Valid</div>
+                                      <div  class="invalid-feedback">
+                      Choose Correct Name <a-zA-Z0-9>
+                      <s></s> length 4-10
+                   </div>
+                   <div class="form-group mt-3">
+                    <lable style="font-weight: bold;">Select Pre Build Flow :</lable><br>
+                    <select id="select"  required class="btn col-6 form-control form-control-lg Btn-custom" data-style="btn Btn-custom" name="pre_build">
+                   
+                  <%if(ad=="none"){%> 
+                  <option value="">Select</option>
+                   <option>Ad</option>
+                   <option>SignUp</option>
+                   <option>KYC</option>
+                   <option>Finance</option>
+                   <%} else{%>
+                    <option value="">Select</option>
+                   <option selected>Ad</option>
+                   <option>SignUp</option>
+                   <option>KYC</option>
+                   <option>Finance</option>
+                    
+                    <%}%>
+                  
+                  </select>
+                    <div  class="valid-feedback">Valid</div>
+                    <div  class="invalid-feedback">
+    Choose Correct option
+ </div>
+                                    </div>
+                                    <%if(ad!="none"){%>
+                                    <h4 data-toggle="collapse" data-target=".item_data" class="p-2 mt-2 mb-2 add" style=" border:solid thin #111e6c; background-color: #fff;color:#111e6c;border-radius: 10px;cursor: pointer;">Select Widget Item<i class=" float-right fa fa-angle-down mt-2" aria-hidden="true"></i>
+                                      <div class="mt-1" style="font-size: 14px;">Customise widget item text and more</div></h4>
+                                      <%} else {%>
+                                        <h4 data-toggle="collapse" data-target=".item_data" class="p-2 mt-2 mb-2 add" style="display: none; border:solid thin #111e6c; background-color: #fff;color:#111e6c;border-radius: 10px;cursor: pointer;">Select Widget Item<i class=" float-right fa fa-angle-down mt-2" aria-hidden="true"></i>
+                                          <div class="mt-1" style="font-size: 14px;">Customise widget item text and more</div></h4>     
+                                        
+                                        <%}%>
+
+
+                                        <%if(ad!="none"){%>
+                                          <div class="item_data">
+                                           <%} else {%>
+                                            <div class="item_data collapse">
+                                              <%}%>
+                                       
+                                      <div class="form-group add">
+                                        
+                                        <%if(ad!="none"){%>
+                                       
+                                        <%for(var i=0;i< ad.length;i++){%>
+                                        
+                                          <div class="col-2 float-left" >
+                                          <a href="/update_item/<%=ad[i]._id%>"><img src="/<%=ad[i].Picture_1%>" width="50px" height="50px"></a>
+                                          
+                                          </div>
+
+
+                                        <%}%>
+                                        <%}%>
+                                          <div style="clear:both;"></div>
+
+<br>
+                                        <a class="btn btn-sm btn-primary" href="/ad_item/<%=ukey%>">Click to add items</a>
+  
+  
+  
+                                    </div>
+                                    </div>
+                              
+                                    <h4 data-toggle="collapse" data-target=".setting"  class="p-2 mt-2 " style="border:solid thin #111e6c;background-color: #fff;color:#111e6c;border-radius: 10px; cursor: pointer;">Settings<i class=" float-right fa fa-angle-down mt-2" aria-hidden="true"></i>
+                                      <div class="mt-2" style="font-size: 14px;">Customise widget sizing, branding and more</div>
+                                      
+                                    </h4>
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Responsive:</lable>
+                                    <br>
+                                      <span class="text-dark mr-2">Yes</span><input class="mt-2" type="radio" class="form-control" name="responsive" value="1"  required >
+                                      <span class="text-dark ml-3 mr-2">No</span><input checked class="mt-2"  type="radio" selected class="form-control" name="responsive" value="0"  required >
+                                    <div class="valid-feedback">Valid</div>
+                                   
+                                  </div>
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Light Theme:</lable>
+                                    <br>
+                                    <span class="text-dark mr-2">Yes</span><input class="mt-2" type="radio" class="form-control" name="theme_light" value="1"  required >
+                                    <span class="text-dark ml-3 mr-2">No</span><input checked class="mt-2"  type="radio" selected class="form-control" name="theme_light" value="0"  required >
+                                    <div class="valid-feedback">Valid</div>
+                                   
+                                  </div>
+                                  
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Choose width in Px:</lable>
+                                      <input type="number" name="width" required class="form-control form-control-lg" value="350" placeholder="350">
+                                      <div  class="valid-feedback">Valid</div>
+                                      <div class="invalid-feedback">
+                       Please Choose valid px
+                   </div>
+                                    </div>
+
+                                   <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Choose height in Px:</lable>
+                                      <input type="number" name="height" required class="form-control form-control-lg" value="515" placeholder="515">
+                                      <div  class="valid-feedback">Valid</div>
+                                      <div class="invalid-feedback">
+                       Please Choose valid px
+                   </div>
+                                    </div>
+
+
+
+                                  
+                                  
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Choose Navigation Button color:</lable>
+                                    <br>
+                                      <input class="mt-2" type="color" name="nav_btn_color" value="#31353d" required >
+                                    <div class="valid-feedback">Valid</div>
+                                   
+                                  </div>
+
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Choose Navigation Button Text color:</lable>
+                                    <br>
+                                      <input class="mt-2" type="color" name="nav_btn_text_color" value="#ffffff" required >
+                                    <div class="valid-feedback">Valid</div>
+                                   
+                                  </div>
+                                  <div class="form-group setting collapse">
+                                    <lable style="font-weight: bold;">Choose Text color:</lable>
+                                  <br>
+                                    <input class="mt-2" type="color" name="text_color" value="#000000" required >
+                                  <div class="valid-feedback">Valid</div>
+                                 
+                                </div>
+
+                                  <div class="form-group setting collapse">
+                                      <lable style="font-weight: bold;">Button Border:</lable>
+                                    <br>
+                                    <span class="text-dark mr-2">Yes</span><input class="mt-2" type="radio" class="form-control" name="btn_border" value="1" value="#0000" required >
+                                    <span class="text-dark ml-3 mr-2">No</span><input checked class="mt-2"  type="radio" selected class="form-control" name="btn_border" value="0" value="#0000" required >
+                                    <div class="valid-feedback">Valid</div>
+                                   
+                                  </div>
+
+
+
+
+
+                                  <div class="form-group setting collapse">
+                                      <label  style="font-weight: bold;">Choose Logo</label>
+                                    <input type="file" name="userfile" required class="form-control">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Plz Choose Logo
+                 </div>
+                                  </div>
+                                  
+                                  <h4 data-toggle="collapse" data-target=".text" class="p-2 mt-2 mb-2" style="border:solid thin #111e6c;background-color: #fff;color:#111e6c;border-radius: 10px; cursor: pointer;">Text & Button<i class=" float-right fa fa-angle-down mt-2" aria-hidden="true"></i>
+                                    <div class="mt-1" style="font-size: 14px;">Customise widget Text Button and more</div></h4>
+                                  <div class="form-group text collapse">
+                                      <label  style="font-weight: bold;">Start Flow Button Text</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,10}$" value="Start"  name="start_btn_text" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-10 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  <div class="form-group text collapse">
+                                      <label  style="font-weight: bold;">Confirm Button Text</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,10}$" value="Confirm"  name="confirm_btn_text" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-10 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  <div class="text collapse">
+                                  <div class=" form-group signup_f " style="display: none;">
+                                      <label  style="font-weight: bold;">Page1 Heading</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,16}$" value="Welcome"  name="heading" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-8 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                </div>
+                                <div class="text collapse">
+                                  <div class="form-group signup_f" style="display: none;">
+                                      <label  style="font-weight: bold;">Page1 Sub-heading</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,16}$" value="Fill out Info"  name="sub_heading" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-16 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  </div>
+                                  <div class="text collapse">
+                                  <div class="form-group signup_f" style="display: none;">
+                                      <label  style="font-weight: bold;">Page2 heading</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,16}$" value="Thanks"  name="page2_heading" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-16 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  </div>
+                                  <div class="text collapse">
+                                  <div class="form-group signup_f" style="display: none;">
+                                      <label  style="font-weight: bold;">Page2 Sub heading</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,16}$"  value="For Joing Us" name="page2_sub_heading" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-16 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  </div>
+                                  <div class="text collapse">
+                                  <div class="form-group signup_f" style="display: none;">
+                                      <label  style="font-weight: bold;">Confirmation Text</label>
+                                    <input type="text" pattern="^[a-zA-Z0-9\s]{4,16}$" value="thanks" name="confirmation_text" required class="form-control form-control-lg" placeholder="abc....">
+                                    <div class="valid-feedback">Valid</div>
+                                    <div class="invalid-feedback">
+                     Length Must be 4-16 charactors a-zA-Z0-9\s
+                 </div>
+                                  </div>
+                                  </div>
+                                     
+                              <input type="hidden" name="ukey" value="<%=ukey%>"
+                                 
+                                  <div class="form-group">
+                                    <input  id="submitBtn" type="submit" value="Create Widget" class="btn btn-block" >
+                                  </div>
+                                </form>
+                                <%}%>
+                              </div>
+                            </div>
+                          
+                             
+                           
+                      </div>
+                      <div class=" float-left row-2 ml-4" >
+                        <div col-sm-12 col-lg-12>
+                          <h5 class="text-center" style="color: #111e6c;">Preview</h5>
+                       
+                          </div>
+                            
+                          </div>
+
+
+
+                  <div style="clear: both;"></div>
+                     
+                     
+                  
+  
+  
+  
+  
+                     
+  
+  
+  
+                  </div>
+
+
+
+   
+  </div>
+
+
+
+             
+        
+  
+      </div>
+      
+      
+      
+  </div>
+  </div>
+  </div>
+</header>
+    <!-- page-content" -->
+
+
+
+
+
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+ 
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/2.2.0/jquery.min.js"></script>
+    <script>
+      $(document).ready (function(){
+       $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+       $(".alert-dismissible").alert('close');
+   });
+            
+   });
+     </script>
+  <script>
+  jQuery(function ($) {
+  
+  $(".sidebar-dropdown > a").click(function() {
+  $(".sidebar-submenu").slideUp(200);
+  if (
+  $(this)
+    .parent()
+    .hasClass("active")
+  ) {
+  $(".sidebar-dropdown").removeClass("active");
+  $(this)
+    .parent()
+    .removeClass("active");
+  } else {
+  $(".sidebar-dropdown").removeClass("active");
+  $(this)
+    .next(".sidebar-submenu")
+    .slideDown(200);
+  $(this)
+    .parent()
+    .addClass("active");
+  }
+  });
+  
+  $("#close-sidebar").click(function() {
+  $(".page-wrapper").removeClass("toggled");
+  });
+  $("#show-sidebar").click(function() {
+  $(".page-wrapper").addClass("toggled");
+  });
+  
+  
+  
+  
+  });
+  </script>
+  
+  <script>
+  $(document).ready(function(){
+    $('#select').on('change', function() {
+      var selectedCountry = $(this).children("option:selected").val();
+      if ( selectedCountry == 'SignUp' || selectedCountry == 'Finance')
+      //.....................^.......
+      {
+        $(".signup_f").show();
+        $(".add").hide();
+  
+      }
+      else if (selectedCountry == 'Ad')
+      {
+        $(".signup_f").hide();
+        $(".add").show();
+      }
+      else
+      {
+        $(".signup_f").hide();
+        $(".add").hide();
+      }
+      
+     
+      
+      
+    });
+  });
+  </script>
+  <script>
+  function myFunction() {
+  if( document.getElementById("file").disabled === true)
+    document.getElementById("file").disabled = false;
+  else
+   document.getElementById("file").disabled = true;
+  }
+  </script>
+
+
+
+
+<script>
+    jQuery(document).ready(function() {
+ 
+ $('.dismiss, .overlay').on('click', function() {
+     $('.sidebar').removeClass('active');
+     $('.overlay').removeClass('active');
+ });
+
+ $('.open-menu').on('click', function(e) {
+     e.preventDefault();
+     $('.sidebar').addClass('active');
+     $('.overlay').addClass('active');
+     // close opened sub-menus
+     $('.collapse.show').toggleClass('show');
+     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+ });
+
+ /* other code */
+
+});
+$('a.scroll-link').on('click', function(e) {
+    e.preventDefault();
+    scroll_to($(this), 0);
+});
+ 
+function scroll_to(clicked_link, nav_height) {
+    var element_class = clicked_link.attr('href').replace('#', '.');
+    var scroll_to = 0;
+    if(element_class != '.top-content') {
+        element_class += '-container';
+        scroll_to = $(element_class).offset().top - nav_height;
+    }
+    if($(window).scrollTop() != scroll_to) {
+        $('html, body').stop().animate({scrollTop: scroll_to}, 1000);
+    }
+}
+$('.to-top a').on('click', function(e) {
+    e.preventDefault();
+    if($(window).scrollTop() != 0) {
+        $('html, body').stop().animate({scrollTop: 0}, 1000);
+    }
+});
+$('a.btn-customized-dark').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').removeClass('light');
+});
+ 
+$('a.btn-customized-light').on('click', function(e) {
+    e.preventDefault();
+    $('.sidebar').addClass('light');
+});
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'down') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '0'
+});
+ 
+$('.section-container').waypoint(function(direction) {
+    if (direction === 'up') {
+        $('.menu-elements li').removeClass('active');
+        $('.menu-elements a[href="#' + this.element.id + '"]').parents('li').addClass('active');
+    }
+},
+{
+    offset: '-5'
+});
+</script>
+<script>
+  // Material Select Initialization
+$(document).ready(function() {
+$('.my-select').selectpicker();
+});
+</script>
+
+</body>
+</html>

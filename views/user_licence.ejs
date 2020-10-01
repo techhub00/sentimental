@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/animation.css">
+  <title>SDrive</title>
+  <script>
+
+(function() {
+'use strict';
+window.addEventListener('load', function() {
+// Fetch all the forms we want to apply custom Bootstrap validation styles to
+var forms = document.getElementsByClassName('needs-validation');
+// Loop over them and prevent submission
+var validation = Array.prototype.filter.call(forms, function(form) {
+form.addEventListener('submit', function(event) {
+if (form.checkValidity() === false) {
+event.preventDefault();
+event.stopPropagation();
+}
+form.classList.add('was-validated');
+}, false);
+});
+}, false);
+})();
+    </script>
+  <style>
+      a:hover{
+          text-decoration: none;
+        
+      }
+
+  </style> 
+</head>
+
+<body style="background-color: #fff;" data-spy="scroll" data-target="#main-nav" id="home">
+
+ 
+ 
+  <!-- HOME SECTION -->
+  <header>
+    <div class="dark-overlay col-sm-12 p-0 ">
+      <div class="home-inner container p-1 ">
+        <div class="row bg-white p-0 col-lg-12 col-sm-12  m-auto" style="opacity: 0.8; border-radius: 20px;">
+          <div class="card card-form" style="width:<%=Data.Width%>px; min-height:<%=Data.Height%>px; background:#fff;color:<%=Data.Text_Color%>;border:none">
+            <div class="card-body col-sm-12 " style="background-image: url('/<%=Data.Background%>');background-repeat: no-repeat; min-height:<%=Data.Height%>px ;">
+            <img class="mx-auto d-block" src="/<%=Data.Logo%>" height="40px">
+           
+              
+            <h4 class="text-center mt-3" style="font-weight: bold;">AML Verification and Credit Check</h4>
+          
+           
+            <form method="POST" action="l_verification" id="myForm1" class="needs-validation" novalidate>
+                
+                <div class="form-group">
+                    <lable style="font-weight: bold;">Licence Type :</lable><br>
+                    <select id="select"  required class="btn col-6 form-control form-control-lg Btn-custom" data-style="btn Btn-custom" name="l_type">
+                    <option value="">Select</option>
+                   <option value="no">No Licence</option>
+                   <option value="learn">Learners</option>
+                   <option value="res">Restricted</option>
+                   <option value="full">Full</option>
+                    </select>
+                    <div  class="valid-feedback">Valid</div>
+                    <div  class="invalid-feedback">
+                Choose Correct option
+                </div>
+                                    </div>
+
+               
+                <div class="form-group full" style="display: none;">
+                   
+                  <input type="text" id="l_no" disabled    name="l_no" required class="form-control form-control-lg" placeholder="Enter Licence No:Dh1234">
+                  <div class="valid-feedback">Valid</div>
+                  <div class="invalid-feedback">
+   Plz Choose your licence no
+</div>
+                </div>
+                <div class="form-group full" style="display: none;">
+               
+              <input type="number" id="l_v" disabled name="l_v" required class="form-control form-control-lg" placeholder="Enter licence version">
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">
+Plz Choose your licence version
+</div>
+            </div>
+            <div class="form-group full" style="display: none;">
+                <label  style="font-weight: bold;">Expiry Date</label>
+              <input type="date" id="e_date" disabled name="e_date" required class="form-control form-control-lg" >
+              <div class="valid-feedback">Valid</div>
+              <div class="invalid-feedback">
+Plz Choose you licence expiry date
+</div>
+            </div>
+            
+            
+          
+
+            <input type="hidden" value="<%=Data._id%>" name="id">
+           
+            <input type="hidden" value="<%=s_info[0]%>" name="barrow_amount">     
+            <input type="hidden" value="<%=s_info[1]%>" name="loan_term">
+            <input type="hidden" value="<%=s_info[2]%>" name="first_name">
+            <input type="hidden" value="<%=s_info[3]%>" name="middle_name">
+            <input type="hidden" value="<%=s_info[4]%>" name="last_name">
+            <input type="hidden" value="<%=s_info[5]%>" name="email">
+            <input type="hidden" value="<%=s_info[6]%>" name="dob">
+            <input type="hidden" value="<%=s_info[7]%>" name="gender">
+            <input type="hidden" value="<%=s_info[8]%>" name="address">
+            <input type="hidden" value="<%=s_info[9]%>" name="number">
+            <input type="hidden" value="<%=s_info[10]%>" name="expenses">
+            <input type="hidden" value="<%=s_info[11]%>" name="total_as">
+            <input type="hidden" value="<%=s_info[12]%>" name="total_laib">
+
+<div class="form-group text-center">
+               <input class="btn btn-sm mt-2" style="background-color: <%=Data.Nav_Btn_Color%>; color:<%=Data.Nav_Btn_Text_Color%>" type="submit" value="Confirm">  
+            </div>
+            </form>
+           
+            
+
+             
+              
+            </div>
+          </div>
+
+
+
+
+       </div>   
+      </div>
+    </div>
+</header>
+  
+
+  <!-- EXPLORE SECTION -->
+ 
+ 
+
+  <!-- FOOTER -->
+  
+
+  <!-- CONTACT MODAL -->
+  
+
+
+  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+    crossorigin="anonymous"></script>
+<script>
+  // Trigger CSS animations on scroll.
+// Detailed explanation can be found at http://www.bram.us/2013/11/20/scroll-animations/
+
+// Looking for a version that also reverses the animation when
+// elements scroll below the fold again?
+// --> Check https://codepen.io/bramus/pen/vKpjNP
+
+jQuery(function($) {
+  
+  // Function which adds the 'animated' class to any '.animatable' in view
+  var doAnimations = function() {
+    
+    // Calc current offset and get all animatables
+    var offset = $(window).scrollTop() + $(window).height(),
+        $animatables = $('.animatable');
+    
+    // Unbind scroll handler if we have no animatables
+    if ($animatables.length == 0) {
+      $(window).off('scroll', doAnimations);
+    }
+    
+    // Check all animatables and animate them if necessary
+		$animatables.each(function(i) {
+       var $animatable = $(this);
+			if (($animatable.offset().top + $animatable.height() - 20) < offset) {
+        $animatable.removeClass('animatable').addClass('animated');
+			}
+    });
+
+	};
+  
+  // Hook doAnimations on scroll, and trigger a scroll
+	$(window).on('scroll', doAnimations);
+  $(window).trigger('scroll');
+
+});
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+    // Get the current year for the copyright
+    $('#year').text(new Date().getFullYear());
+
+    // Init Scrollspy
+    $('body').scrollspy({ target: '#main-nav' });
+
+    // Smooth Scrolling
+    $("#main-nav a").on('click', function (event) {
+      if (this.hash !== "") {
+        event.preventDefault();
+
+        const hash = this.hash;
+
+        $('html, body').animate({
+          scrollTop: $(hash).offset().top
+        }, 800, function () {
+
+          window.location.hash = hash;
+        });
+      }
+    });
+  </script>
+  <script>
+   $(document).ready (function(){
+    $(".alert-dismissible").fadeTo(2000, 300).slideUp(300, function(){
+    $(".alert-dismissible").alert('close');
+});
+         
+});
+  </script>
+  <script>
+    $(document).ready(function(){
+    // Check if passwords match
+   
+    let currForm1 = document.getElementById('myForm1');
+      // Validate on submit:
+      currForm1.addEventListener('submit', function(event) {
+        if (currForm1.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        currForm1.classList.add('was-validated');
+      }, false);
+      // Validate on input:
+      currForm1.querySelectorAll('.form-control').forEach(input => {
+        input.addEventListener(('input'), () => {
+          if (input.checkValidity()) {
+            input.classList.remove('is-invalid')
+            input.classList.add('is-valid');
+          } else {
+            input.classList.remove('is-valid')
+            input.classList.add('is-invalid');
+          }
+          var is_valid = $('.form-control').length === $('.form-control.is-valid').length;
+          $("#submitBtn").attr("disabled", !is_valid);
+        });
+      });
+    });
+  </script>
+<script>
+ 
+
+    $(document).ready(function(){
+      $('#select').on('change', function() {
+        if ( this.value == 'full' )
+        //.....................^.......
+        {
+          $(".full").show();
+          $(".no").hide();
+          $('#l_no').prop( "disabled", false );
+          $('#l_v').prop( "disabled", false );
+          $('#e_date').prop( "disabled", false );
+          $('#p_number').prop( "disabled", true );
+          $('#e_date_p').prop( "disabled", true );
+
+        }
+        else if( this.value == 'no' )
+        {
+            $(".full").hide();  
+            $(".no").show();
+  
+            $('#l_no').prop( "disabled", true );
+          $('#l_v').prop( "disabled", true );
+          $('#e_date').prop( "disabled", true );
+
+          $('#p_number').prop( "disabled", false );
+          $('#e_date_p').prop( "disabled", false );
+          
+        }
+        else
+        {
+            $(".full").hide();  
+            $(".no").hide();
+  
+            $('#l_no').prop( "disabled", true );
+          $('#l_v').prop( "disabled", true );
+          $('#e_date').prop( "disabled", true );
+
+          $('#p_number').prop( "disabled", true );
+          $('#e_date_p').prop( "disabled", true );
+          
+        }
+        
+       
+        
+        
+      });
+  });
+  </script>
+</body>
+
+</html>
